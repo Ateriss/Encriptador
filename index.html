@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+
+        <meta charset="UTF-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width">
+        <title>Ale Encriptadora</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <img src="imagenes/Logo.svg">
+    
+
+        </header>
+
+        <main>
+
+            <section class="contenedor">
+
+                <div class="seccion1">
+
+                    <div>
+                        <!--<input type="text" class="textoEncriptar" required placeholder="Ingrese el texto aquí">-->
+
+                    <textarea rows="10" class="textoEncriptar"required placeholder="Ingrese el texto aquí"></textarea>
+
+                    </div>
+
+                
+                    <div class="importante">
+
+                        <iconify-icon icon="bi:exclamation-circle-fill">
+                        </iconify-icon><script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+                        <p>Solo letras minusculas y sin acentos</p>
+                    
+                    </div>
+                    
+                    <div class="boton">
+
+                        <button id="bEncriptar">Encriptar</button>
+                        <button id="bDesencriptar">Desencriptar</button>
+            
+                    </div>
+
+                </div>
+
+                <div class="sol">
+
+                    <img id="muneco" src="imagenes/Muñeco.svg">
+
+                    <textarea  class="solucion" placeholder="Ningún mensaje fue encontrado" ></textarea>
+                    <!--<<p id="sinTxt">Ningún mensaje fue encontrado</p>-->
+                    <p id="sinTxt-instruccion" >Ingresa el texto que deseas encriptar o desencriptar</p>
+                    <button id="copiar">Copiar</button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+        </footer>
+
+    </body>
+
+</html>
+
+<script>
+
+    let copiar=document.querySelector("#copiar");
+    let solucion = document.querySelector(".solucion");
+
+    let encriptar = () => {
+
+        let texto = document.querySelector(".textoEncriptar").value;
+        if(texto === ""){
+            return
+        };
+        texto = texto.replace(/e/gi, "enter");
+        texto = texto.replace(/i/gi, "imes");
+        texto = texto.replace(/a/gi, "ai");
+        texto = texto.replace(/o/gi, "ober");
+        texto = texto.replace(/u/gi, "ufat");
+        solucion.value=texto
+        solucion.style.width="84%";
+        solucion.style.height="80%";
+        solucion.style.margin="32px"; 
+        copiar.style.margin="32px";
+        copiar.style.display="block";
+        document.getElementById('muneco').style.display = 'none';
+        document.getElementById('sinTxt-instruccion').style.display = 'none';
+        
+    };
+
+
+
+
+    let desencriptar = () => {
+
+        let texto = document.querySelector(".textoEncriptar").value;
+        if(texto === ""){
+            return
+        };
+        texto = texto.replace(/enter/gi, "e");
+        texto = texto.replace(/imes/gi, "i");
+        texto = texto.replace(/ai/gi, "a");
+        texto = texto.replace(/ober/gi, "o");
+        texto = texto.replace(/ufat/gi, "u");
+        solucion.value=texto
+        solucion.style.width="84%";
+        solucion.style.height="80%";
+        solucion.style.margin="32px"; 
+        copiar.style.margin="32px";
+        copiar.style.display="block";
+        document.getElementById('muneco').style.display = 'none';
+        document.getElementById('sinTxt-instruccion').style.display = 'none';
+        
+    };
+
+        
+        document.querySelector("#bEncriptar").addEventListener("click", encriptar);
+        document.querySelector("#bDesencriptar").addEventListener("click", desencriptar);
+        copiar.addEventListener("click", function(){
+            document.querySelector(".solucion").select();
+            document.execCommand("copy");
+            copiar.classList.add("clickeo");
+            
+        });
+
+        copiar.addEventListener("mouseup", function(){
+            copiar.classList.remove("clickeo");
+        });
+
+      
+
+
+</script>
+
+
+

@@ -1,0 +1,384 @@
+/*@media screen and (max-width:1920px) {*/
+
+*{
+
+    box-sizing: border-box;
+}
+
+body{
+    
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Se utiliza unidad relativa en lugar de píxeles */
+    background: #F3F5FC;
+}
+
+header img{
+
+    position: relative;
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+}
+
+.contenedor{
+
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en múltiples líneas */
+    justify-content: center; /* Centra los elementos en el eje principal (horizontal) */
+    align-items: center; /* Centra los elementos en el eje transversal (vertical) */
+}
+
+
+
+.textoEncriptar{
+
+    display: flex;
+    position: relative;
+    margin: 22% 0 0 10%; /* Se utilizan porcentajes en lugar de píxeles */
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem; /* Se utiliza unidad relativa */
+    line-height: 150%;
+    background: #F3F5FC;
+    color: #0A3871;
+    width: 100%;
+    
+}
+
+.textoEncriptar::placeholder{
+
+    color: #0A3871; 
+}
+
+.textoEncriptar:active{
+
+    color: #0A3871; 
+}
+
+/*.textoEncriptar:hover{
+
+    border: 1px;
+    border-color: #0A3871;
+}*/
+
+
+.importante{
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    margin: 27.5% 0 0 80px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+
+}
+
+/*botones*/
+
+.boton{
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    position: relative;
+    margin: 16px 0 0 80px;
+}
+
+
+/*#bEncriptar{
+
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+}
+
+#bEncriptar:hover{
+
+    background: #03e9f4;
+    color: #050801;
+    box-shadow:0 0 5px #03e9f4, 0 0 25px #03e9f4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent);
+
+}
+
+#bEncriptar:nth-child(1){
+
+    filter: hue-rotate(270deg);
+}
+
+#bEncriptar:nth-child(2){
+
+    filter: hue-rotate(110deg);
+}
+
+#bEncriptar span{
+
+    position:absolute;
+    display: block;
+}*/
+
+
+
+#bEncriptar{
+
+    width: 328px;
+    height: 67px;
+    background: #0A3871;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #F3F5FC;
+
+}
+
+#bEncriptar:active{
+
+    background: #F3F5FC;
+    color: #0A3871;
+}
+
+#bDesencriptar{
+
+    width: 328px;
+    height: 67px;
+    background: #D8DFE8;
+    border-radius: 24px;
+    border: 1px solid #0A3871;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0A3871;
+    
+}
+
+ #bDesencriptar:active{
+
+    background: #0A3871;
+    color:#D8DFE8;
+}
+
+    /* SOLUCIÓN */
+
+    .sol{
+
+        position: absolute;
+        width: 400px;
+        height: 944px;
+        left: 1000px;
+        top: 40px;
+        background: #FFFFFF;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+        border-radius: 32px;
+    }
+
+    .sol img{
+        
+        position: absolute;
+        margin: 243px 32px 397px;
+
+    }
+
+    /*.sol #sinTxt{
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 120%;
+        text-align: center;
+        color: #343A40;
+        margin:579px 32px 16px
+    }*/
+
+    .solucion{
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 120%;
+        text-align: center;
+        color: #343A40;
+        border: none;
+        margin:579px 32px 16px; 
+        width: 336px;
+        
+    }
+
+    #solucion::placeholder{
+
+        text-align: center;
+        text-justify: auto;
+    }
+
+    #sinTxt-instruccion{
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: #495057;
+        margin:0 32px 108px
+        
+
+    }
+
+    #copiar{
+
+        width: 328px;
+        height: 67px;
+        background: #FFFFFF;
+        border-radius: 24px;
+        border: 1px solid #0A3871;
+        font-family: 'Inter';
+        font-style: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #0A3871;
+        position: relative;
+        margin: 32px; 
+        display: none;
+        /*display: none;  se debe activar cuando aparezca la solución*/
+    
+    }
+
+    #copiar.clickeo{
+
+        background: #495057;
+        color:#F3F5FC;
+    }
+
+
+    @media (max-width: 768px) {
+        /* Sección "solución" debajo de la sección 1 */
+        
+        .contenedor{
+
+            margin-left: -9%;
+            margin-top: auto;
+        }
+
+        .seccion1 {
+            float: none; /* Se quita el flotado */
+            width: 100%; /* Se establece el ancho al 100% */
+            margin-left: -10%;
+            
+        }
+
+        .textoEncriptar{
+
+            width: 90%;
+        }
+
+        .boton{
+
+            width: 90%; 
+            gap: 10%;
+        }
+
+        .importante{
+
+            margin: 5% 0 0 80px;
+        }
+        
+        .sol {
+            position: inherit; /* Se cambia la posición a relativa */
+            width: 90%; /* Se utilizan porcentajes en lugar de píxeles */
+            height: auto; /* Se establece como automático para ajustarse al contenido */
+            margin: 40px auto; /* Se centra la sección en pantallas pequeñas */
+            border-radius: 16px;
+            clear: both; /* Se limpia cualquier flotado anterior */
+        }
+    
+
+
+        .sol img{
+
+            display: none;
+        }
+
+        .sol #sinTxt {
+
+            margin: 32px 32px 16px;
+            width: auto;
+            height: auto;
+        }
+
+        .solucion{
+
+            margin: 32px 0 0 0;
+            width: 100%;
+            background: none;
+
+         }
+
+        .sol #sinTxt-instruccion{
+
+            margin: 0 0 32px 0;
+        }
+
+        .sol #copiar{
+
+            position: relative;
+            margin: 32px auto;
+            
+            
+            /* display: none;*/
+
+        }
+
+
+    }
+
+    @media (max-width: 375px) {
+
+        .boton{
+
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+        }
+
+        .contenedor {
+            margin-left: -15%;
+            margin-top: 5%;
+
+        }
+
+        .textoEncriptar{
+            
+            font-size: 2rem;
+            
+        }
+
+        .importante{
+
+            margin: 5% 0 0 80px;
+        }
+
+    }
+
